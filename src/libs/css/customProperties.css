@@ -1,0 +1,13 @@
+:root {
+    /* Sizes */
+    --xx-small: 0.125rem;
+    --x-small: 0.25rem;
+    --small: 0.5rem;
+    --small-plus: 0.75rem;
+    --medium: 1rem;
+    --medium-plus: 1.5rem;
+    --large: 2rem;
+    --x-large: 3rem;
+    --xx-large: 5rem;
+    --xxx-large: 8rem;
+}
