@@ -1,0 +1,105 @@
+.form {
+    background-color: white;
+    padding: var(--max) var(--large) var(--large);
+    border-radius: var(--medium);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--large);
+
+    @media (--media-m) {
+        width: 40rem;
+    }
+
+    & select {
+        appearance: none;
+        background-image:
+            linear-gradient(45deg, transparent 50%, var(--river-grey) 50%),
+            linear-gradient(135deg, var(--river-grey) 50%, transparent 50%);
+        background-position: calc(100% - var(--small-plus)), calc(100% - var(--small));
+        background-size: var(--x-small) var(--x-small), var(--x-small) var(--x-small);
+        background-repeat: no-repeat;
+    }
+
+    & button {
+        background-color: var(--burple-blue);
+        color: var(--text-light);
+        border: none;
+        cursor: pointer;
+        box-shadow: var(--box-shadow-text);
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    & label,
+    & input,
+    & select {
+        color: var(--text-dark);
+        margin-bottom: var(--small);
+    }
+
+    & input,
+    & select,
+    & button {
+        padding: var(--small-plus);
+        border-radius: var(--small);
+        font-size: var(--medium);
+
+        @media (--media-m) {
+            font-size: var(--medium-extra);
+        }
+    }
+
+    & input,
+    & select {
+        background-color: white;
+        border: var(--xxx-small) solid var(--breeze-grey);
+        margin-bottom: var(--medium);
+        transition: border 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+
+        &:focus {
+            box-shadow: var(--box-shadow-text);
+        }
+
+        &:focus,
+        &:hover {
+            outline: 0;
+            border: var(--xxx-small) solid var(--burple-blue);
+        }
+    }
+}
+
+.formBottom {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-column-gap: var(--large);
+    margin-bottom: var(--medium);
+
+    @media (--media-m) {
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    }
+}
+
+.formExpiration {
+    display: flex;
+    flex-direction: column;
+}
+
+.formExpirationSelect {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-column-gap: var(--medium);
+
+    @media (--media-m) {
+        grid-column-gap: var(--large);
+    }
+}
+
+.formCardCvv {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,19 +1,24 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
-import App from './App';
-import lang from '../../libs/lang';
+import App from '.';
 
 describe('App', () => {
     it('should render the component', () => {
-        const wrapper = mount(<App />);
+        render(<App />);
 
-        expect(wrapper.find(App).exists()).toBeTruthy();
+        expect(screen.getByTestId('app')).toBeInTheDocument();
     });
 
-    it('should render the correct title', () => {
-        const wrapper = mount(<App />);
+    it('should render the form inside the component', () => {
+        render(<App />);
 
-        expect(wrapper.find('div').text()).toBe(lang.title);
+        expect(screen.getByTestId('form')).toBeInTheDocument();
+    });
+
+    it('should render the gh button inside the component', () => {
+        render(<App />);
+
+        expect(screen.getByTestId('gh-button')).toBeInTheDocument();
     });
 });
