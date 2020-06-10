@@ -1,6 +1,8 @@
-# React Template (react-template)
+# Card Flip Form
 
-A template for React projects. This template contains features to make development easier and more consistant.
+[Live Demo](https://lewisjfoster.github.io/card-flip-form/)
+
+A React based credit card entry form with card flip animations.
 
 ## Getting Started
 

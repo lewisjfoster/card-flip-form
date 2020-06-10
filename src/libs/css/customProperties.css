@@ -1,13 +1,43 @@
 :root {
+    /* Base Colors */
+    --black: #000;
+    --city-white: #dfe6e9;
+    --breeze-grey: #b2bec3;
+    --river-grey: #636e72;
+    --dracula-grey: #2d3436;
+    --light-blue: #eceafa;
+    --burple-blue: #4834d4;
+
+    /* Background & Font Colors */
+    --background: var(--light-blue);
+    --text-light: var(--city-white);
+    --text-grey: var(--breeze-grey);
+    --text-dark: var(--dracula-grey);
+    --card-strip: rgba(0, 0, 0, 0.6);
+
     /* Sizes */
+    --xxx-small: 0.0625rem;
     --xx-small: 0.125rem;
     --x-small: 0.25rem;
     --small: 0.5rem;
     --small-plus: 0.75rem;
     --medium: 1rem;
+    --medium-extra: 1.25rem;
     --medium-plus: 1.5rem;
     --large: 2rem;
     --x-large: 3rem;
     --xx-large: 5rem;
     --xxx-large: 8rem;
+    --max: 11rem;
+
+    /* Card Sizes */
+    --card-height: 14.5rem;
+    --card-height-mobile: calc(var(--card-height) * 0.85);
+    --card-width: 22.5rem;
+    --card-width-mobile: calc(var(--card-width) * 0.85);
+    --card-perspective: 37.5rem;
+
+    /* Box Shadow */
+    --box-shadow: 0 var(--small) var(--large) var(--small) rgba(47, 54, 64, 0.2);
+    --box-shadow-text: 0 var(--xx-small) var(--medium) var(--xxx-small) rgba(47, 54, 64, 0.2);
 }

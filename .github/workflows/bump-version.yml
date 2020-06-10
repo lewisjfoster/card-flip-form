@@ -13,7 +13,7 @@
       steps:
         - name: "Checkout source code"
           uses: "actions/checkout@v2"
-#       - name: Conventional Changelog Action
-#         uses: TriPSs/conventional-changelog-action@v2
-#         with:
-#           github-token: ${{ secrets.GITHUB_TOKEN }}
+        - name: Conventional Changelog Action
+          uses: TriPSs/conventional-changelog-action@v2
+          with:
+            github-token: ${{ secrets.GITHUB_TOKEN }}

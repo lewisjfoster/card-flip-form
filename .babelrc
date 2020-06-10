@@ -6,5 +6,8 @@
                 "react-remove-properties"
             ]
         }
-    }
+    },
+    "plugins": [
+        ["inline-react-svg", {"svgo": false}]
+    ]
 }
