@@ -14,9 +14,9 @@ A React based credit card entry form with card flip animations.
 2. Setup the repo
 
 ```
-git clone https://github.com/lewisjfoster/<repo-name>.git
+git clone https://github.com/lewisjfoster/<card-flip-form>.git
 
-cd <repo-name>
+cd <card-flip-form>
 
 yarn install
 ```
