@@ -1,7 +1,24 @@
-body {
-    margin: 0;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-.title {
-    color: red;
+body {
+    margin: 0;
+    background-color: var(--background);
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: var(--xx-large) var(--large);
+
+    @media (--media-m) {
+        padding: var(--xx-large) var(--x-large);
+    }
 }

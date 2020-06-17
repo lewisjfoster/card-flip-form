@@ -7,8 +7,14 @@
         "node": true,
         "jest": true
     },
-    "plugins": ["prettier"],
-    "extends": ["eslint:recommended", "airbnb", "prettier"],
+    "plugins": [
+        "prettier"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "airbnb",
+        "prettier"
+    ],
     "globals": {},
     "parserOptions": {
         "sourceType": "module",
@@ -18,16 +24,48 @@
         }
     },
     "rules": {
-        "prettier/prettier": ["error"],
+        "prettier/prettier": [
+            "error"
+        ],
         "import/no-extraneous-dependencies": 0,
+        "no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
         "global-require": 0,
-        "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0 }],
+        "no-multiple-empty-lines": [
+            "error",
+            {
+                "max": 1,
+                "maxBOF": 0
+            }
+        ],
         "react/jsx-filename-extension": 0,
         "react/jsx-indent": 0,
+        "react/forbid-prop-types": 0,
         "react/destructuring-assignment": 0,
         "react/jsx-props-no-spreading": 0,
         "react/jsx-indent-props": 0,
         "jsx-a11y/click-events-have-key-events": 0,
-        "jsx-a11y/no-static-element-interactions": 0
+        "jsx-a11y/no-static-element-interactions": 0,
+        "jsx-a11y/label-has-associated-control": [
+            "error",
+            {
+                "required": {
+                    "some": [
+                        "nesting",
+                        "id"
+                    ]
+                }
+            }
+        ],
+        "jsx-a11y/label-has-for": [
+            "error",
+            {
+                "required": {
+                    "some": [
+                        "nesting",
+                        "id"
+                    ]
+                }
+            }
+        ]
     }
 }

@@ -1,0 +1,29 @@
+.button {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.link {
+    background-color: var(--black);
+    color: var(--city-white);
+    padding: var(--medium) var(--large);
+    border-radius: var(--x-small);
+    font-family: 'Lucida Console', Monaco, monospace;
+    transition: box-shadow 0.25s;
+    text-decoration: none;
+    border: none;
+    width: 100%;
+    text-align: center;
+
+    &:hover,
+    &:focus,
+    &:active {
+        outline: 0;
+        box-shadow: var(--box-shadow);
+    }
+
+    @media (--media-m) {
+        width: auto;
+    }
+}

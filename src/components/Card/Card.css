@@ -1,0 +1,134 @@
+.isFlipped {
+    transform: rotateY(180deg);
+}
+
+.cardWrapper {
+    font-family: 'Lucida Console', Monaco, monospace;
+    height: var(--card-height-mobile);
+    width: var(--card-width-mobile);
+    perspective: var(--card-perspective);
+    margin-bottom: calc(var(--xxx-large) * -1);
+
+    @media (--media-m) {
+        height: var(--card-height);
+        width: var(--card-width);
+    }
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    user-select: none;
+}
+
+.cardFace {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: var(--medium);
+    box-shadow: var(--box-shadow);
+    background-color: var(--burple-blue);
+    color: var(--text-light);
+}
+
+/* Card Front */
+.cardFront {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--medium);
+}
+
+.cardFrontTop {
+    display: flex;
+    flex-direction: column;
+
+    & > img {
+        width: var(--large);
+        margin-left: var(--small);
+
+        @media (--media-m) {
+            width: var(--x-large);
+        }
+    }
+
+    & > svg {
+        width: var(--x-large);
+        align-self: flex-end;
+        fill: var(--text-light);
+        margin-bottom: var(--medium);
+
+        @media (--media-m) {
+            width: var(--xx-large);
+            margin-bottom: var(--small);
+        }
+    }
+}
+
+.cardFrontNumber {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 var(--small);
+    font-size: var(--medium-extra);
+
+    @media (--media-m) {
+        font-size: var(--medium-plus);
+    }
+}
+
+.cardFrontBottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--small-plus);
+
+    @media (--media-m) {
+        font-size: var(--medium);
+    }
+
+    & .title {
+        color: var(--text-grey);
+        font-size: var(--small);
+        margin-bottom: var(--x-small);
+
+        @media (--media-m) {
+            font-size: var(--small-plus);
+        }
+    }
+}
+
+/* Card Back */
+.cardBack {
+    transform: rotateY(180deg);
+    padding: var(--medium-plus) 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardBackStrip {
+    height: var(--x-large);
+    width: 100%;
+    background-color: var(--card-strip);
+    margin-bottom: var(--medium);
+}
+
+.cardBackCvv {
+    text-align: right;
+    margin: 0 var(--medium);
+
+    & .title {
+        color: var(--text-grey);
+        font-size: var(--small-plus);
+        margin: 0 var(--x-small) var(--x-small) 0;
+    }
+}
+
+.cardBackSignature {
+    background-color: var(--city-white);
+    color: var(--river-grey);
+    padding: var(--small);
+    height: var(--large);
+}
